@@ -50,6 +50,8 @@ arrests <- arrests %>%
   dplyr::select(-c(event_number, date_of_birth))
 ```
 
+# Arrests by state
+
 Arrest counts by state: absolute arrest totals higher in WA; both states show overall decline in arrests but note WA increase in 2017-2018 which is not mirrored in OR.
 
 ```{r arrests_by_year, warning=FALSE}
@@ -68,6 +70,10 @@ p1 <- arrests %>%
 p1
 ```
 
+# OR arrests
+
+## OR arrests by month
+
 OR arrests by month; no notable seasonal trends:
 
 ```{r arrest_seasonality, warning=FALSE}
@@ -84,6 +90,8 @@ p2 <- arrests %>%
 p2
 
 ```
+
+## OR arrests by day of week
 
 OR arrests by weekday, note most arrests during weekdays.
 
@@ -102,6 +110,8 @@ p3
 
 ```
 
+# Arrest method
+
 Arrest method by state. Note OR shift from "CAP Local Incarceration" to "Non-Custodial Arrest" starting in 2015, not mirrored in WA.
 
 ```{r arrests_state, warning=FALSE}
@@ -118,6 +128,8 @@ p1 <- arrests %>%
 
 ggplotly(p1)
 ```
+
+## Arrest methods OR
 
 Arrest methods in OR only as percent of total:
 
@@ -138,6 +150,8 @@ ggplotly(p1)
 
 ```
 
+## Arrest method by day of week
+
 Arrest method by day of week; not very interesting:
 
 ```{r arrest_method_wday, warning=FALSE}
@@ -155,6 +169,8 @@ p1 <- arrests %>%
 p1
 
 ```
+
+# Country of citizenship OR
 
 Country of citizenship
 
