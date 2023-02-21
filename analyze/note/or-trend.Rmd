@@ -124,9 +124,19 @@ p1 <- arrests %>%
   scale_fill_viridis_d(direction=-1) +
   scale_color_viridis_d(direction=-1) +
   ylim(0, NA) +
-  facet_grid(~state)
+  labs(title="ICE arrest methods by state") +
+  xlab('') +
+  ylab('Arrests') +
+  facet_grid(~state) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, size=8))
 
 ggplotly(p1)
+```
+
+```{r plot_print}
+
+p1
+
 ```
 
 ## Arrest methods OR
